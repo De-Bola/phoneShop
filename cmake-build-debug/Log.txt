@@ -1,0 +1,44 @@
+1
+All items viewed
+0
+1
+visited main menu at Thu Jan  1 02:00:00 1970
+
+All items viewed
+1
+Thu Jan  1 02:00:00 1970
+viewed quote list at Thu Jan  1 02:00:00 1970
+
+2
+Thu Jan  1 02:00:00 1970
+viewed product list at Thu Jan  1 02:00:00 1970
+
+3
+Thu Jan  1 02:00:00 1970
+viewed joined list at Thu Jan  1 02:00:00 1970
+
+0
+Thu Jan  1 02:00:00 1970
+Invalid entry
+2
+visited main menu at Thu Jan  1 02:00:00 1970
+
+user chose to edit entries
+1
+navigated to edit menu at Thu Jan  1 02:00:00 1970
+
+user chose to edit a quote
+edited quote list at Thu Jan  1 02:00:00 1970
+
+0
+navigated to edit menu at Thu Jan  1 02:00:00 1970
+
+Invalid entry
+Search through inventory
+0
+user navigated to search menu at Thu Jan  1 02:00:00 1970
+
+Invalid entry
+0
+visited main menu at Thu Jan  1 02:00:00 1970
+

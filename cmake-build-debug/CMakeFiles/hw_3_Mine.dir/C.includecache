@@ -1,0 +1,26 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/cygdrive/c/Users/admin/CLionProjects/hw_3_Mine/hw3.h
+
+/cygdrive/c/Users/admin/CLionProjects/hw_3_Mine/main.c
+stdio.h
+-
+stdlib.h
+-
+string.h
+-
+stdbool.h
+-
+ctype.h
+-
+time.h
+-
+hw3.h
+/cygdrive/c/Users/admin/CLionProjects/hw_3_Mine/hw3.h
+

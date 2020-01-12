@@ -1,0 +1,1 @@
+/usr/bin/cc -g  -Wl,--enable-auto-import CMakeFiles/hw_3_Mine.dir/main.c.o  -o hw_3_Mine.exe -Wl,--out-implib,libhw_3_Mine.dll.a -Wl,--major-image-version,0,--minor-image-version,0 

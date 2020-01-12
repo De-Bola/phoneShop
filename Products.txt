@@ -1,0 +1,8 @@
+1000,Samsung,S9,16,8.10,android
+1001,Huaweii,P15,32,8.50,android
+1010,iPhone,7s,128,10.10,ios
+1011,Nokia,3310i,2,4.00,jar
+1100,infinix,X9,32,9.20,zen
+1101,iPhone,XX,64,10.20,ios
+1110,HTC,M19,8,9.00,jellybin
+1111,Xiaomi,M13,256,11.10,booticab
