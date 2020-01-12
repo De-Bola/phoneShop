@@ -12,9 +12,9 @@ int main(void) {
     productNode *productList = NULL;
     quoteNode *quoteList = NULL;
     FILE *log;
-    int input, quote_id, productCode = 0;
-    int isYes;
-    bool isExists, isQuoteExists, isProductExists, hasQuotes;
+    int input = 0, quote_id = 0, productCode = 0;
+    int isYes = 0, i = 0;
+    bool isExists = false, isQuoteExists = false, isProductExists = false, hasQuotes = false;
     char answer[LENGTH_OF_CHAR];
     char userInput[LENGTH_OF_CHAR];
     char *maker;
@@ -23,7 +23,7 @@ int main(void) {
     productNode *searchResult = NULL;
     Quote quoteFromFile;
     Product productFromFile;
-    time_t currentTime;
+    time_t currentTime = time(0);
 
     log = fopen(LOGFILE, "a+");
     if (log == NULL) {
@@ -65,7 +65,7 @@ int main(void) {
         switch (input) {
             case 1://prints all items
                 fprintf(log, "All items viewed\n");
-                int displayInput;
+                int displayInput = 0;
                 do {
                     printf("Press '1' to print quote list\n");
                     printf("Press '2' to print product list\n");
@@ -96,7 +96,7 @@ int main(void) {
                 break;
             case 2://edits available items
                 fprintf(log, "user chose to edit entries\n");
-                int editInput;
+                int editInput = 0;
                 do {
                     printf("Press '1' to edit a quote\n");
                     printf("Press '2' to edit a product\n");
@@ -158,7 +158,7 @@ int main(void) {
 
             case 3://search by product_code
                 fprintf(log, "Search through inventory\n");
-                int searchInput;
+                int searchInput = 0;
                 do {
                     printf("Press '1' to display available phones\n");
                     printf("Press '2' to search by maker\n");
@@ -177,7 +177,7 @@ int main(void) {
                         case 2://to search by maker
                             printf("Please enter a phone maker:\n");
                             scanf("%s", userInput);
-                            for (int i = 0; i < strlen(userInput); i++) {
+                            for (i = 0; i < strlen(userInput); i++) {
                                 userInput[i] = tolower(userInput[i]);
                             }
                             maker = calloc(strlen(userInput) + 1, sizeof(char));
@@ -196,7 +196,7 @@ int main(void) {
                         case 3://to search by model
                             printf("Please enter a phone model:\n");
                             scanf("%s", userInput);
-                            for (int i = 0; i < strlen(userInput); i++) {
+                            for (i = 0; i < strlen(userInput); i++) {
                                 userInput[i] = tolower(userInput[i]);
                             }
                             model = calloc(strlen(userInput) + 1, sizeof(char));
@@ -388,7 +388,7 @@ int main(void) {
                 }
                 break;
             case 0:
-                //writeChangesToFile(productList, quoteList);
+                writeChangesToFile(productList, quoteList);
                 freeQuoteList(availablePhones);
                 freeProductList(searchResult);
                 freeProductList(productList);
@@ -994,7 +994,7 @@ Quote getQuoteById(quoteNode *quotes, int quote_id) {
     }
 }
 
-int checkUserChoice(char *answer) {
+int checkUserChoice(const char *answer) {
     int asciiValue = (int) answer[0];
     if (asciiValue == 89 || asciiValue == 121) {
         return 1;
@@ -1226,10 +1226,10 @@ void bubbleSortQuoteList(quoteNode *head) {
     int swapped;
     quoteNode *firstNode;
 
-    //Checking for empty list
+    //making sure list is not empty
     if (head == NULL) { return; }
 
-    //bubblesort
+    //do bubblesort
     do {
         swapped = 0;
         firstNode = head;

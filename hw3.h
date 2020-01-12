@@ -76,7 +76,7 @@ bool searchByProductCode(productNode *products, int productCode);
 
 bool searchByQuoteId(quoteNode *products, int quote_id);
 
-int checkUserChoice(char *answer);
+int checkUserChoice(const char *answer);
 
 void addNewQuote(quoteNode *quotes, int productCode);
 
